@@ -1,11 +1,168 @@
-:root{
-    --primary:#3DCFD3; 
-    --dark:#161616;
-    --pure:#FFFFFF;
-    --ternary:#898989;
-    --light:#F2F2F2;   
+body.dark{
+    --bg-color1:#1C1C1C;
+    --bg-color2:#343434;
+    --color1:#FFFF;
+    --color2:#DDD;
+}
+
+*,
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: var(--color1);
+    font-weight:  600;
+}
+
+h4{
+    font-size: 1.25rem;
+    color:var(--color1);
+    font-weight: 600;
+}
+
+h6{
+    font-size: 1rem;
+}
+
+p{
+    color: var(--color1);
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.portfolio-container{
+    max-width: 1070;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header{
-    background: var(--dark);
+    left: 0px;
+    right: 0px;
+    z-index: 20;
+    transition: .8s;
+    padding: 15px;
+    position: fixed;
+    background-color: var(--bg-color1);
+
+}
+
+header .portfolio-row.header-wrap{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-navbar{
+    display: none;
+}
+
+.brand-name a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color1);
+}
+
+.navbar-toggle i{
+    font-size: 1.25rem;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+.portfolio-navbar.show{
+    display: block;
+    position:absolute;
+    background-color:#ecf1fa;
+    width: 100%;
+    left: 0px;
+    top: 60px;
+    padding: 15px;
+    border-top: 15px solid #000;
+    text-align: center;
+}
+
+.portfolio-navbar ul li{
+    display: block;
+}
+
+.portfolio-navbar ul li a{ 
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 45px;
+
+}
+
+
+@media (min-width: 768px){
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 3.5rem;
+        color: var(--color1);
+        font-weight: 600;
+    }
+
+    header{
+        position: absolute;
+        padding: 0px 15px;
+    }
+
+    navbar-toggle i{
+        display: none;
+    }
+
+    .portfolio-navbar{
+        display: block;
+    }
+
+    .portfolio-navbar ul li{
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a{
+        color: var(--color1);
+        line-height: 65px;
+    }
 }
