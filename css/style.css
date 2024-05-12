@@ -169,7 +169,7 @@ header .portfolio-row.header-wrap{
 }
 
 
-/*==============Altbaşlık Bölümü==============*/
+/*==============Alt Başlık Bölümü==============*/
 .subtitle{
     position: relative;
     color: #f987d6;
@@ -216,7 +216,7 @@ h2 strong{
     transition: all 0.3s ease-out 0s;
 }
 
-.hello-btn:hover{
+.hello-btn a:hover{
     background-color: #293b5f;
 }
 
@@ -252,9 +252,21 @@ h2 strong{
     filter:drop-shadow(0 0 30px rgba(223, 53, 13, 0.8));
 }
 
+
+/*==============Resume Bölümü Stil==============*/
+#resume{
+    background-color: var(--bg-color2);
+    padding: 60px 0;
+}
+
+.resume-heading{
+    width: 100%;
+    text-align: center;
+}
+
 /*==============Ana Başlık==============*/
 h1 strong, h2 strong{
-    background-image: linear-gradiennt(to right, #977ec7 0%, #f987d6 100%);
+    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
     -webkit-text-fill-color: transparent;
     -webkit-animation-clip: text;
     background-clip: text;
