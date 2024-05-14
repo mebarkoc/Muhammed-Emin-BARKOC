@@ -343,6 +343,48 @@ h1 strong, h2 strong{
     padding-bottom: 44px;
 }
 
+.years{
+    width: 90px;
+    flex: none;
+    color: var(--color1);
+}
+
+.qualification-content{
+    position: relative;
+    padding-left: 20px;
+}
+
+.qualification-content::before{
+    content:"";
+    height: 100%;
+    width:3px;
+    left: 0;
+    top: -10px;
+    position: absolute;
+    background-color: #e8e8e8;
+}
+
+.qualification-content::after{
+    position: absolute;
+    content: "";
+    height: 7px;
+    width: 7px;
+    left: -2px;
+    top: 12px;
+    transform:rotate(45deg);
+    background: #e15747;
+}
+
+.qualification-content .title{
+    font-weight: 400;
+    display: inline-block;
+    color: #d55041;
+}
+
+.institution{
+    color: #78add9;
+    font-weight: 400;
+}
 
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
