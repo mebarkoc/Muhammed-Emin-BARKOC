@@ -253,17 +253,6 @@ h2 strong{
 }
 
 
-/*==============Resume Bölümü Stil==============*/
-#resume{
-    background-color: var(--bg-color2);
-    padding: 60px 0;
-}
-
-.resume-heading{
-    width: 100%;
-    text-align: center;
-}
-
 /*==============Ana Başlık==============*/
 h1 strong, h2 strong{
     background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
@@ -276,6 +265,84 @@ h1 strong, h2 strong{
     color:var(--color1);
     margin-bottom: 10px;
 }
+
+
+/*==============Resume Bölümü Stil==============*/
+#resume{
+    background-color: var(--bg-color2);
+    padding: 60px 0;
+}
+
+.resume-heading{
+    width: 100%;
+    text-align: center;
+}
+
+.resume-body{
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.resume-item{
+    display: inline;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.resume-item a{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color1);
+    line-height: 45px;
+}
+
+.resume-tab{
+    display: none;
+}
+
+.resume-tab.active{
+    display: block;   
+    animation: fade .5s;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.resume-item.active .resume-link{
+    position: relative;
+    font-weight: 700;
+}
+
+.resume-item.active .resume-link::before{
+    position: absolute;
+    content: "";
+    background-color: #7257F2;
+    left: 0;
+    top: 30px;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+
+/*==============Resume Tab Content==============*/
+.resume-content{
+    display: flex;
+}
+
+.resume-content:not(:last-child){
+    padding-bottom: 44px;
+}
+
 
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
