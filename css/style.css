@@ -172,7 +172,7 @@ header .portfolio-row.header-wrap{
 /*==============Alt Başlık Bölümü==============*/
 .subtitle{
     position: relative;
-    color: #f987d6;
+    color: #c0392b;
     font-weight: 800;
     letter-spacing: 3px;
     margin-bottom: 20px;
@@ -187,12 +187,12 @@ header .portfolio-row.header-wrap{
     left: 0px;
     width: 35px;
     height: 3px;
-    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+    background-image: linear-gradient(to right, #e74c3c  0%, #f39c12 100%);
 }
 
 h1 strong, 
 h2 strong{
-    background-image: linear-gradiennt(to right, #977ec7 0%, #f987d6 100%);
+    background-image: linear-gradiennt(to right, #e74c3c 0%, #f39c12 100%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -209,7 +209,7 @@ h2 strong{
     margin: 20px 0;
     padding: 15px 45px;
     color: #fff;
-    background-color: #977ec7;
+    background-color: #c0392b;
     z-index: 1001;
     line-height: 30px;
     border-radius: 15px;
@@ -217,7 +217,7 @@ h2 strong{
 }
 
 .hello-btn a:hover{
-    background-color: #293b5f;
+    background-color: #f39c12;
 }
 
 
@@ -255,7 +255,7 @@ h2 strong{
 
 /*==============Ana Başlık==============*/
 h1 strong, h2 strong{
-    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+    background-image: linear-gradient(to right, #c0392b 0%, #f39c12 100%);
     -webkit-text-fill-color: transparent;
     -webkit-animation-clip: text;
     background-clip: text;
@@ -386,6 +386,27 @@ h1 strong, h2 strong{
     font-weight: 400;
 }
 
+/*==============Yetenekler Barı==============*/
+.bar-content{
+    margin-bottom: 15px;
+}
+
+.bar-heading{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.bar-title, .bar-percentage{
+    color: var(--color1);
+}
+
+.bar-progress{
+    display: flex;
+
+}
+
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
     h1{
@@ -424,8 +445,28 @@ h1 strong, h2 strong{
         line-height: 65px;
     }
 
+/*==============Yetenekler Barı==============*/
+header.header-sticky{
+    position: fixed;
+    background-color: #FFF;
+    z-index: 2000;
+    transition: .8s;
+    box-shadow:0 4px 6px 0 rgba(12,0,46,0.05);
+}
 
-    /*==============Hakkında Bölümü Responsive==============*/
+.header-sticky .brand-name a{
+    color: #3e4455;
+}
+
+.header-sticky .navbar-toggle{
+    color: #3e4455;
+}
+
+.header-sticky .portfolio-navbar ul li a{
+    color: #3e4455;
+}
+
+/*==============Hakkında Bölümü Responsive==============*/
     #about{
         padding: 175px 0 150px 0;
     }
@@ -449,5 +490,47 @@ h1 strong, h2 strong{
     }
 
 
+    /*==============Resume Bölümü Responsive==============*/
+    .resume-heading{
+        margin: auto 0;
+        width: 35%;
+        text-align: unset;
+    }
+
+    .resume-body{
+        width: 65%;
+        margin-top: 30px;
+        padding-top: 0;
+        padding-left: 40px;
+        min-height: 400px;
+    }
+
+    .resume-item{
+        display: block;
+        padding-left: 20px;
+    }
+
+    .resume-item .resume-link{
+        font-size: 1.1rem;
+    }
+
+    .resume-item.active .resume-link::before{
+        position: unset;
+    }
+
+    .resume-item.active::before{
+        position: absolute;
+        content:"";
+        background-color: #7257F2;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        height: 100%;
+        width: 3px;
+    }
+
+    .resume-item.active{
+        background: linear-gradient(90deg, #775afc1a 0%, #775afc00 100% );
+    }
 }
 

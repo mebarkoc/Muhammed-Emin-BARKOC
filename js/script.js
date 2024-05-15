@@ -29,3 +29,19 @@ resumeHeading.onclick = (event) => {
     correspondingTab.classList.add("active");
   }
 };
+
+
+function takipNav(){
+  var headerHeight = document.querySelector("#about").offsetHeight / 2;
+  var navbar = document.querySelector("header");
+  var scrollValue = window.scrollY;
+
+  if(scrollValue > headerHeight){
+    navbar.classList.add("header-sticky");
+  }
+  else if (scrollValue < headerHeight){
+    navbar.classList.remove("header-sticky");
+  }
+}
+
+window.addEventListener("scroll", takipNav)
