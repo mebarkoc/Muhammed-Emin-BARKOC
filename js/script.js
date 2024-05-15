@@ -44,4 +44,45 @@ function takipNav(){
   }
 }
 
-window.addEventListener("scroll", takipNav)
+window.addEventListener("scroll", takipNav);
+
+
+
+
+//Şehrim Slider
+
+const swiper = new Swiper(".sehrim-slider",{
+
+  //Default parameters
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  
+  navigation:{
+    nextEl: ".sonrakiOkBtn",
+    precEl: ".oncekiOkBtn",
+  },
+
+  pagination:{
+    el:"swiper-pagination",
+    renderBullet:function(index, className){
+      return'<li class="+className+"></li>' ;
+    }
+  },
+
+  clickable:true,
+
+  //Responsive breakpoints
+  breakpoints:{
+    576:{
+      slidesPerView: 2,
+    },
+    
+    768:{
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+  
+  }
+
+});

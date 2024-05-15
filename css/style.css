@@ -407,6 +407,94 @@ h1 strong, h2 strong{
 
 }
 
+
+/*==============Şehrim Bölümü Stil==============*/
+#sehrim{
+    padding: 60px 0;
+    background-color: var(--bg-color1);
+}
+
+.sehrim-slider{
+    padding-top: 30px;  
+}
+
+.sehir-icerigi{
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sehir-icerigi img{
+    border-radius: 0.5rem;
+}
+
+.img-kaplama{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgba(16, 16, 16, .5);
+    transition: .5s;
+    transform:scale(1.15);
+    opacity: 0;
+}
+
+.sehir-icerigi:hover .img-kaplama{
+    opacity: 1;
+    transform:scale(1);
+}
+
+.icerik-basligi{
+    width: 100%;
+    position: absolute;
+    bottom: -45px;
+    padding: 50px 30px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.sehir-icerigi:hover .icerik-basligi {
+    bottom: 30%;
+    opacity: 1; 
+}
+
+.icerik-basligi h4{
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+.icerik-basligi p{
+    color: #FFF;
+}
+
+
+
+
+/*==============Swiper Arrow and pagination==============*/
+
+.arrow{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.oncekiOkBtn{
+    z-index: 1000;
+    border: 2px solid var(--color2);
+    color: var(--color1);
+    background-color: var(--bg-color1);
+    font-size: .80rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 2.625rem;
+}
+
+
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
     h1{
@@ -466,31 +554,15 @@ header.header-sticky{
     color: #3e4455;
 }
 
-/*==============Hakkında Bölümü Responsive==============*/
-    #about{
-        padding: 175px 0 150px 0;
-    }
-    
-    .about-intro{
-        width: 60%;
-        margin-top: 0;
-        order: 1;
-    }
 
-    .about-intro p{
-        padding-right: 16%;
-
-    }
-
-
-    /*==============Slider Resim Responsive==============*/
+/*==============Slider Resim Responsive==============*/
     .about-image{
         width: 40%;
         order: 2;
     }
 
 
-    /*==============Resume Bölümü Responsive==============*/
+/*==============Eğitim Bölümü Responsive==============*/
     .resume-heading{
         margin: auto 0;
         width: 35%;
@@ -532,5 +604,7 @@ header.header-sticky{
     .resume-item.active{
         background: linear-gradient(90deg, #775afc1a 0%, #775afc00 100% );
     }
+
+    
 }
 
