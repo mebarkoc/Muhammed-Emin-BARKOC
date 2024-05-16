@@ -653,6 +653,50 @@ h1 strong, h2 strong{
     }
 }
 
+
+/*==============Footer Stil==============*/
+footer{
+    background-color: var(--bg-color1);
+    padding: 20px 0;
+}
+
+.portfolio-row.footer-wrap{
+    justify-content: center;
+}
+
+.footer-top{
+    display: none;
+}
+
+.footer-bottom{
+    padding: 20px 0;
+}
+
+.social-item{
+    display: inline-block;
+}
+
+.social-icons li a{
+    height: 3rem;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #FFF;
+    transition: all 500ms ease;
+    color: rgba(5, 18, 20, 0.7);
+    font-size: 1.1rem;
+}
+
+.social-item:not(:last-child){
+    margin-right: 0.5rem;
+}
+
+.social-icons li a:hover{
+    transform:translateY(-10px);
+}
+
+
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
     h1{
@@ -666,7 +710,7 @@ h1 strong, h2 strong{
     }
 
 
-/*==============Header Responsive==============*/
+    /*==============Header Responsive==============*/
     header{
         position: absolute;
         padding: 0px 15px;
@@ -691,36 +735,36 @@ h1 strong, h2 strong{
         line-height: 65px;
     }
 
-/*==============Yetenekler Barı==============*/
-header.header-sticky{
-    position: fixed;
-    background-color: #FFF;
-    z-index: 2000;
-    transition: .8s;
-    box-shadow:0 4px 6px 0 rgba(12,0,46,0.05);
-}
+    /*==============Yetenekler Barı==============*/
+    header.header-sticky{
+        position: fixed;
+        background-color: #FFF;
+        z-index: 2000;
+        transition: .8s;
+        box-shadow:0 4px 6px 0 rgba(12,0,46,0.05);
+    }
 
-.header-sticky .brand-name a{
-    color: #3e4455;
-}
+    .header-sticky .brand-name a{
+        color: #3e4455;
+    }
 
-.header-sticky .navbar-toggle{
-    color: #3e4455;
-}
+    .header-sticky .navbar-toggle{
+        color: #3e4455;
+    }
 
-.header-sticky .portfolio-navbar ul li a{
-    color: #3e4455;
-}
+    .header-sticky .portfolio-navbar ul li a{
+        color: #3e4455;
+    }
 
 
-/*==============Slider Resim Responsive==============*/
+    /*==============Slider Resim Responsive==============*/
     .about-image{
         width: 40%;
         order: 2;
     }
 
 
-/*==============Eğitim Bölümü Responsive==============*/
+    /*==============Eğitim Bölümü Responsive==============*/
     .resume-heading{
         margin: auto 0;
         width: 35%;
@@ -764,7 +808,7 @@ header.header-sticky{
     }
 
     
-/*==============İletişim Responsive==============*/
+    /*==============İletişim Responsive==============*/
     .iletisim-bilgi{
         width: 35%;
         padding-top: 15px;
@@ -788,5 +832,23 @@ header.header-sticky{
     .input-konu, .form-submit{
         padding: 10px;
     }
+
+
+    /*==============İletişim Responsive==============*/
+
+    .footer-top{
+        display: block;
+        border-bottom: 1px solid var(--bg-color1);
+    }
+
+    .portfolio-row.footer-wrap{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
 }
+
+
+
 
