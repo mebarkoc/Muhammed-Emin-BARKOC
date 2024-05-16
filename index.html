@@ -213,7 +213,7 @@
     </section>
 
 
-    <section class="iletisim">
+    <section id="iletisim">
         <div class="portfolio-container">
             <span class="subtitle">
                 İletişim
@@ -253,10 +253,35 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="iletisim-heading">
                     <span class="subtitle">
                         Mesaj
                     </span>
+                    <h2>
+                        <strong>Mesaj Gönder</strong>
+                    </h2>
+                </div>
+                <div class="footer-iletisim">
+                    <form action="#" method="post" id="iletisim-form">
+                        <div class="portfolio-row">
+                            <div class="input-wrapper">
+                                <input type="text" name="İsim" placeholder="isminizi giriniz." class="input-control">
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" name="email" placeholder="email adresinizi giriniz." class="input-control">
+                            </div>
+                            <div class="input-konu">
+                                <input type="text" name="konu" placeholder="konunuzu giriniz." class="input-control">
+                            </div>
+                            <div class="input-aciklama">
+                                <textarea name="mesaj" rows="9" placeholder="mesajınızı giriniz." class="iletisim-msj"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn-submit">Gönder</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
