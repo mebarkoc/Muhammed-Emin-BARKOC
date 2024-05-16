@@ -602,6 +602,56 @@ h1 strong, h2 strong{
     cursor: pointer;
 }
 
+.loader{
+    width: 100%;
+    padding: 10px;
+    background-color: #3d4145;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.loader i{
+    color: var(--color2);
+    animation:rotateme .4s linear infinite;
+}
+
+.loader.show{
+    display: block;
+}
+
+.form-mesaj{
+    width: 100%;
+    background-color: #3d4145;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}   
+
+.form-mesaj.show{
+    display: block;
+}
+
+.success-msg{
+    color: green;
+    line-height: 3;
+}
+
+.error-msg{
+    color: red;
+    line-height: 3;
+}
+
+@keyframes rotateme{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
 
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){

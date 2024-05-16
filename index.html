@@ -37,7 +37,7 @@
                             <a href="#projects" class="navbar-link">Mirasımız</a>
                         </li>
                         <li>
-                            <a href="#contact" class="navbar-link">İletişim</a>
+                            <a href="#iletisim" class="navbar-link">İletişim</a>
                         </li>
                     </ul>
                 </div>
@@ -224,7 +224,7 @@
             <div class="portfolio-row">
                 <div class="iletisim-bilgi">
                     <ul>
-                        <li class="iletisim-esya">
+                        <li class="iletisim-üye">
                             <div class="iletisim-icon">
                                 <i class="lni lni-phone"></i>
                             </div>
@@ -233,7 +233,7 @@
                                 <span>0535 534 16 65</span>
                             </div>
                         </li>
-                        <li class="iletisim-esya">
+                        <li class="iletisim-üye">
                             <div class="iletisim-icon">
                                 <i class="lni lni-envelope"></i>
                             </div>
@@ -242,7 +242,7 @@
                                 <span>eclakjdsg@gmail.com</span>
                             </div>
                         </li>
-                        <li class="iletisim-esya">
+                        <li class="iletisim-üye">
                             <div class="iletisim-icon">
                                 <i class="lni lni-map-marker"></i>
                             </div>
@@ -266,7 +266,7 @@
                     <form action="#" method="post" id="iletisim-form">
                         <div class="portfolio-row">
                             <div class="input-wrapper">
-                                <input type="text" name="İsim" placeholder="isminizi giriniz." class="input-control">
+                                <input type="text" name="isim" placeholder="isminizi giriniz." class="input-control">
                             </div>
                             <div class="input-wrapper">
                                 <input type="email" name="email" placeholder="email adresinizi giriniz." class="input-control">
@@ -280,6 +280,10 @@
                         </div>
                         <div class="form-submit">
                             <button type="submit" class="btn-submit">Gönder</button>
+                            <div class="loader">
+                                <i class="lni lni-spinner-solid"></i>
+                            </div>
+                            <div class="form-mesaj"></div>
                         </div>
                     </form>
                 </div>
@@ -288,7 +292,7 @@
     </section>
 
 
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@1/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

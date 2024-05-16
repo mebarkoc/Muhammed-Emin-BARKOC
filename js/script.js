@@ -82,7 +82,39 @@ const swiper = new Swiper(".sehrim-slider",{
       slidesPerView: 3,
       spaceBetween: 30,
     }
-  
   }
-
 });
+
+
+// Email Gönder 
+
+(function() {
+  emailjs.init({publicKey: "5B1APplzC8NRaFiPs"});
+})();
+
+
+const msg = document.querySelector(".form-mesaj");
+
+window.onload = function() {
+  document
+    .getElementById("iletisim-form")
+    .addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.querySelector(".loader").classList.add("show");
+      emailjs.sendForm('service_9vo73qn', 'template_zsc2cal',this).then(
+        function (){
+          document.getElementById("iletisim-form").reset();
+          document.querySelector(".loader").classList.remove("show");
+          msg.innerHTML = "";
+          msg.innerHTML += "<span class='success-msg'>Email Gönderildi.</span>";
+          msg.classList.add("show");
+          setTimeout(() => msg.classList.remove("show"), 2000);
+        },
+        function(error){
+          document.querySelector(".loader").classList.toggle("show");
+          msg.classList.add("show");
+          msg.innerHTML += "<span class='success-msg'>Email Gönderilemedi.</span>";
+        }
+      );
+  });
+};
