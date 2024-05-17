@@ -51,38 +51,36 @@ window.addEventListener("scroll", takipNav);
 
 //Şehrim Slider
 
-const swiper = new Swiper(".sehrim-slider",{
-
-  //Default parameters
+const swiper = new Swiper('.sehrim-slider', {
+  // Default parameters
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  
-  navigation:{
-    nextEl: ".sonrakiOkBtn",
-    precEl: ".oncekiOkBtn",
+  navigation: {
+    nextEl: '.ileriOkButonu',
+    prevEl: '.geriOkButonu',
   },
-
-  pagination:{
-    el:"swiper-pagination",
-    renderBullet:function(index, className){
-      return'<li class="+className+"></li>' ;
-    }
-  },
-
-  clickable:true,
-
-  //Responsive breakpoints
-  breakpoints:{
-    576:{
-      slidesPerView: 2,
+  pagination: {
+    el: '.swiper-pagination',
+    renderBullet: function (index, className) {
+      return '<li class="' + className + '"></li>';
     },
-    
-    768:{
+
+    clickable: true,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 576
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 768px
+    768: {
       slidesPerView: 3,
-      spaceBetween: 30,
-    }
-  }
+      spaceBetween: 30
+    },
+  },
 });
 
 
