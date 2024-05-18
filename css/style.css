@@ -408,93 +408,6 @@ h1 strong, h2 strong{
 }
 
 
-/*==============Şehrim Bölümü Stil==============*/
-#sehrim{
-    padding: 60px 0;
-    background-color: var(--bg-color1);
-}
-
-.sehrim-slider{
-    padding-top: 30px;  
-}
-
-.sehir-icerigi{
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.sehir-icerigi img{
-    border-radius: 0.5rem;
-}
-
-.img-kaplama{
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    right: 25px;
-    bottom: 25px;
-    background-color: rgba(16, 16, 16, .5);
-    transition: .5s;
-    transform:scale(1.15);
-    opacity: 0;
-}
-
-.sehir-icerigi:hover .img-kaplama{
-    opacity: 1;
-    transform:scale(1);
-}
-
-.icerik-basligi{
-    width: 100%;
-    position: absolute;
-    bottom: -45px;
-    padding: 50px 30px;
-    opacity: 0;
-    transition: .5s;
-}
-
-.sehir-icerigi:hover .icerik-basligi {
-    bottom: 30%;
-    opacity: 1; 
-}
-
-.icerik-basligi h4{
-    color: #FFF;
-    font-size: 1.5rem;
-}
-
-.icerik-basligi p{
-    color: #FFF;
-}
-
-
-
-
-/*==============Swiper Arrow and pagination==============*/
-
-.arrow{
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.oncekiOkBtn{
-    z-index: 1000;
-    border: 2px solid var(--color2);
-    color: var(--color1);
-    background-color: var(--bg-color1);
-    font-size: .80rem;
-    text-align: center;
-    cursor: pointer;
-    display: block;
-    width: 2.75rem;
-    height: 2.75rem;
-    line-height: 2.625rem;
-}
-
-
 /*==============İletişim Bölümü Stil==============*/
 #iletisim {
     padding: 60px 0;
@@ -696,6 +609,113 @@ footer{
     transform:translateY(-10px);
 }
 
+/*==============Şehrim Stil==============*/
+
+#sehrim{
+    padding: 60px 0;
+    background-color: var(--bg-color2);
+}
+
+.swiper{
+    padding-top: 30px;
+}
+
+.urun-icerik{
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.urun-icerik img{
+    border-radius: 0.5rem;
+}
+
+.resim-kaplama{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgba(16, 16, 16, 0.5);
+    transition: 0.5s;
+    transform:scale(1.15);
+    opacity: 0;
+}
+
+.urun-icerik:hover .resim-kaplama{
+    opacity: 1;
+    transform:scale(1);
+}
+
+.urun-baslik{
+    width: 100%;
+    position: absolute;
+    bottom: -45px;
+    padding: 50px 30px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.urun-icerik:hover .urun-baslik{
+    bottom: 30%;
+    opacity: 1;
+}
+
+.urun-baslik h4{
+    color: #FFF;
+    font-size: 1.5rem;
+}
+
+.urun-baslik p{
+    color: #FFF; 
+}
+
+.ok{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.ileriOkButonu, .geriOkButonu{
+    z-index: 1000;
+    border: 2px solid var(--color2);
+    color: var(--color1);
+    background-color: var(--bg-color2);
+    font-size: 0.80rem;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    width: 2.75rem;
+    height: 2.75rem;
+    line-height: 2.625rem;
+}
+
+.geriOkButonu{
+    margin-left: 10px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: 60%;
+    display: flex;
+    position: static;
+    margin: 0 auto;
+}
+
+.swiper-pagination-bullet{
+    width: 100%;
+    height: 5px;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet-active{
+    background-image: linear-gradient(162.41deg, #43baff 1.77%, #906ebe 92.78%);
+}
+
+.swiper-pagination-bullet:hover{
+    background-image: linear-gradient(162.41deg, #43baff 1.77%, #906ebe 92.78%);
+    opacity: 1;
+    outline: none;
+}
 
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
@@ -755,14 +775,6 @@ footer{
     .header-sticky .portfolio-navbar ul li a{
         color: #3e4455;
     }
-
-
-    /*==============Slider Resim Responsive==============*/
-    .about-image{
-        width: 40%;
-        order: 2;
-    }
-
 
     /*==============Eğitim Bölümü Responsive==============*/
     .resume-heading{
@@ -846,6 +858,12 @@ footer{
         align-items: center;
     }
 
+
+    /*==============Swiper Responsive==============*/
+
+   .swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: 80%;
+   } 
 
 }
 

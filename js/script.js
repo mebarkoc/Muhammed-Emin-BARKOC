@@ -57,8 +57,8 @@ const swiper = new Swiper('.sehrim-slider', {
   spaceBetween: 30,
   loop: true,
   navigation: {
-    nextEl: '.ileriOkButonu',
-    prevEl: '.geriOkButonu',
+    nextEl: '.geriOkButonu',
+    prevEl: '.ileriOkButonu',
   },
   pagination: {
     el: '.swiper-pagination',
@@ -80,10 +80,8 @@ const swiper = new Swiper('.sehrim-slider', {
       slidesPerView: 3,
       spaceBetween: 30
     },
-  },
+  }
 });
-
-
 
 
 // Email Gönder 
