@@ -86,21 +86,33 @@ const swiper = new Swiper('.sehrim-slider', {
 
 // Email Gönder 
 
-(function() {
-  emailjs.init({
-    publicKey: "5B1APplzC8NRaFiPs",
-  });
-})();
+const form = document.querySelector("form");
+const fullName = document.getElementById("email");
+const email = document.getElementById("isim");
+const konu = document.getElementById("konu");
+const mess = document.getElementById("mesaj");
 
 
-window.onload = function() {
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      emailjs.sendForm('service_9vo73qn', 'template_zsc2cal', this)
-          .then(() => {
-              console.log('SUCCESS!');
-          }, (error) => {
-              console.log('FAILED...', error);
-          });
-  });
+function sendEmail() {
+
+    const bodyMessage = 'Full Name: ${fullName.value}<br> Email: ${email.value} <br> Mesaj: ${mess.value}';
+
+
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "emin.barkoc@ogr.sakarya.edu.tr",
+      Password : "F791A798072D9B5CFE467E1595D3945BF2B6",
+      To : 'emin.barkoc@ogr.sakarya.edu.tr',
+      From : "emin.barkoc@ogr.sakarya.edu.tr",
+      Subject : konu.value,
+      Body : bodyMessage
+    })
 }
+
+form.addEventListener("submit" , (e) => {
+
+  e.preventDefault();
+
+  sendEmail();
+
+});

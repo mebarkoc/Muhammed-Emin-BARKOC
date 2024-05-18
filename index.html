@@ -61,7 +61,7 @@
                         <h3>Sakarya Üniversitesi</h3>
                         <p>Merhaba, ben Muhammed Emin BARKOÇ. Sakarya Üniversitesi Bilgisayar Mühendisliği öğrencisiyim. Çorum'da doğdum. Bilgisayarlarla uğraşmayı seviyorum ve özellikle yazılım geliştirme konusunda ilgiliyim. Aynı zamanda futbol oynamaktan ve futbol maçlarını takip etmekten hoşlanırım. </p>
                         <div class="hello-btn">
-                            <a href="#contact">Selamün Aleyküm</a>
+                            <a href="#iletisim">Merhaba</a>
                         </div>
                     </div>
                 </div>
@@ -260,26 +260,30 @@
 
                 <div class="iletisim-heading">
                     <span class="subtitle">
-                        Mesaj
+                        e-mail
                     </span>
                     <h2>
-                        <strong>Mesaj Gönder</strong>
+                        <strong>e-mail Gönder</strong>
                     </h2>
                 </div>
                 <div class="footer-iletisim">
-                    <form action="#" method="post" id="iletisim-form">
+                    <form action="#" id="iletisim-form">
                         <div class="portfolio-row">
                             <div class="input-wrapper">
-                                <input type="text" name="isim" placeholder="isminizi giriniz." class="input-control">
+                                <input type="text" id="isim" name="isim" placeholder="İsminizi ve soyisminizi giriniz." class="input-control" autocomplete="off">
+                                <div class="hata-txt">İsim soyisim bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-wrapper">
-                                <input type="email" name="email" placeholder="email adresinizi giriniz." class="input-control">
+                                <input type="email" id="email" name="email" placeholder="e-mail adresinizi giriniz." class="input-control" autocomplete="off">
+                                <div class="hata-txt">e-mail bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-konu">
-                                <input type="text" name="konu" placeholder="konunuzu giriniz." class="input-control">
+                                <input type="text" id="konu" name="konu" placeholder="konunuzu giriniz." class="input-control" autocaplete="off">
+                                <div class="hata-txt">Konu bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-aciklama">
-                                <textarea name="mesaj" rows="9" placeholder="mesajınızı giriniz." class="iletisim-msj"></textarea>
+                                <textarea name="mesaj" id="mesaj" rows="9" placeholder="mesajınızı giriniz." class="iletisim-msj" autocomplete="off"></textarea>
+                                <div class="hata-txt">Açıklama bölümü boş bırakılamaz.</div>
                             </div>
                         </div>
                         <div class="form-submit">
@@ -298,7 +302,7 @@
     <footer>
         <div class="portfolio-container">
             <div class="footer-top">
-                <div class="portfolio-row footer wrap">
+                <div class="portfolio-row footer-wrap">
                     <div class="brand-name">
                         <a href="#" class="logo">Muhammed Emin BARKOÇ</a>
                     </div>
@@ -318,8 +322,9 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="portfolio-row footer wrap">
+                <div class="portfolio-row footer-wrap">
                     <ul class="social-icons">
+                        <div class="copyrigt-text"></div>
                         <li class="social-item">
                             <a href="#" target="_blank">
                                 <i class="lni lni-facebook-fill"></i>
@@ -347,9 +352,7 @@
     </footer>
 
 
-
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

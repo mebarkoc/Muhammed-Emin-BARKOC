@@ -481,6 +481,14 @@ h1 strong, h2 strong{
 .input-wrapper, .input-konu, .input-aciklama, .form-submit{
     width: 100%;
     padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.hata-txt{
+    font-size: 14px;
+    color:#d93025;
+    margin-top: 9px;
+    display: none;
 }
 
 .input-control, .iletisim-msj{
@@ -515,47 +523,11 @@ h1 strong, h2 strong{
     cursor: pointer;
 }
 
-.loader{
-    width: 100%;
-    padding: 10px;
-    background-color: #3d4145;
-    margin-top: 10px;
-    text-align: center;
-    font-weight: 600;
-    display: none;
-}
 
-.loader i{
-    color: var(--color2);
-    animation:rotateme .4s linear infinite;
-}
 
-.loader.show{
-    display: block;
-}
 
-.form-mesaj{
-    width: 100%;
-    background-color: #3d4145;
-    margin-top: 10px;
-    text-align: center;
-    font-weight: 600;
-    display: none;
-}   
 
-.form-mesaj.show{
-    display: block;
-}
 
-.success-msg{
-    color: green;
-    line-height: 3;
-}
-
-.error-msg{
-    color: red;
-    line-height: 3;
-}
 
 @keyframes rotateme{
     0%{
@@ -569,11 +541,11 @@ h1 strong, h2 strong{
 
 /*==============Footer Stil==============*/
 footer{
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color2);
     padding: 20px 0;
 }
 
-.portfolio-row.footer-wrap{
+.portfolio-row .footer-wrap{
     justify-content: center;
 }
 
@@ -588,6 +560,7 @@ footer{
 .social-item{
     display: inline-block;
 }
+
 
 .social-icons li a{
     height: 3rem;
@@ -838,7 +811,7 @@ footer{
     .input-wrapper{
         padding: 0 10px;
         width: 50%;
-        margin-bottom: 10px;
+        margin-bottom: 40px;
     }
 
     .input-konu, .form-submit{
@@ -864,6 +837,27 @@ footer{
    .swiper-pagination-bullets.swiper-pagination-horizontal{
     width: 80%;
    } 
+
+
+
+   #about{
+    padding: 175px 0 150px 0;
+   }
+
+   .about-intro{
+    width: 60%;
+    margin-top: 0;
+    order: 1;
+   }
+
+   .about-intro p{
+    padding-right: 16%;
+   }
+
+   .about-image{
+    width: 40%;
+    order: 2;
+   }
 
 }
 
