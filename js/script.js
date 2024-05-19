@@ -84,6 +84,43 @@ const swiper = new Swiper('.sehrim-slider', {
 });
 
 
+
+//İlgi Alanım Slider
+
+const swiper1 = new Swiper('.ilgi-slider', {
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.geriOkButonu',
+    prevEl: '.ileriOkButonu',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    renderBullet: function (index, className) {
+      return '<li class="' + className + '"></li>';
+    },
+
+    clickable: true,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 576
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+  }
+});
+
+
+
 // Email Gönder 
 
 const form = document.querySelector("form");
@@ -148,8 +185,6 @@ function kontrolInput() {
   }
 }
 
-
-
 form.addEventListener("submit" , (e) => {
 
   e.preventDefault();
@@ -161,3 +196,77 @@ form.addEventListener("submit" , (e) => {
       sendEmail();
     }
 });
+
+
+
+//İlgi alanlarım API
+
+const settings = {
+	async: true,
+	crossDomain: true,
+	url: 'https://free-football-live-score.p.rapidapi.com/all-news',
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': '9347b602demshe7516b271391df8p113321jsn43801c0447c0',
+		'X-RapidAPI-Host': 'free-football-live-score.p.rapidapi.com'
+	},
+	processData: false,
+	data: '{\r\n    "language": "tr",\r\n    "page_number": 1\r\n}'
+};
+
+$.ajax(settings).done(function (response) {
+	console.log(response);
+});
+
+
+function getDataFromAPI() {
+  const settings = {
+      async: true,
+      crossDomain: true,
+      url: 'https://free-football-live-score.p.rapidapi.com/all-news',
+      method: 'POST',
+      headers: {
+          'content-type': 'application/json',
+          'X-RapidAPI-Key': '9347b602demshe7516b271391df8p113321jsn43801c0447c0',
+          'X-RapidAPI-Host': 'free-football-live-score.p.rapidapi.com'
+      },
+      processData: false,
+      data: '{\r\n    "language": "en",\r\n    "page_number": 1\r\n}'
+  };
+
+  $.ajax(settings).done(function (response) {
+      addImagesToSlider(response);
+  });
+}
+
+
+function addImagesToSlider(data) {
+  const swiperWrapper = $('.swiper-wrapper'); 
+
+  data.forEach(function(item) {
+      const imgUrl = item.imageUrl
+      const nwUrl = item.page.url
+      const newsTitle = item.title;
+
+
+      const imgElement = $('<img>').attr('src', imgUrl);
+
+      const slideElement = $('<div>').addClass('swiper-slide').append(
+        $('<a>').attr('href', nwUrl).attr('target', '_blank').append(
+            $('<div>').addClass('urun-icerik').append(
+                imgElement,
+                $('<h3>').text(newsTitle).css('color', 'white')
+            )
+        )
+      );
+
+      swiperWrapper.append(slideElement);
+  });
+
+}
+
+getDataFromAPI();
+
+
+

@@ -78,5 +78,13 @@ body{
     font-size: 16px;
     color: #333;
     font-weight: 600;
+}
 
+.error{
+    color: RED;
+    background-color: #d7cdcd;
+    padding: 0;
+    margin-top: 10px;
+    padding-left: 5px;
+    border-radius: 20px;
 }

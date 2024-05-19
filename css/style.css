@@ -195,6 +195,23 @@ header .portfolio-row.header-wrap{
     order: 2;
 }
 
+.hakkinda-resimler{
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+.hakkinda-resimler .hobi-resim-top{
+    margin-top: 10px;
+}
+
+.hakkinda-resimler h3{
+    color:#fff;
+    padding: 5px;
+    margin-top: 5px;
+}
 
 /*==============Alt Başlık Bölümü==============*/
 .subtitle{
@@ -438,7 +455,7 @@ h1 strong, h2 strong{
 /*==============İletişim Bölümü Stil==============*/
 #iletisim {
     padding: 60px 0;
-    background-color: var(--bg-color1);
+    background-color: var(--bg-color2);
     position: relative;
     z-index: 2;
 }
@@ -587,7 +604,7 @@ h1 strong, h2 strong{
 
 /*==============Footer Stil==============*/
 footer{
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
     padding: 20px 0;
 }
 
@@ -632,7 +649,7 @@ footer{
 
 #sehrim{
     padding: 60px 0;
-    background-color: var(--bg-color2);
+    background-color: var(--bg-color1);
 }
 
 .swiper{
@@ -643,6 +660,12 @@ footer{
     text-align: center;
     position: relative;
     cursor: pointer;
+}
+
+.swiper-wraper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .urun-icerik img{
@@ -736,6 +759,101 @@ footer{
     outline: none;
 }
 
+.sehrim-bilgi{
+    margin-top: 30px;
+}
+
+.sehrim-bilgi-header-item-parent{
+    color: #FFF;
+    padding: 5px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    margin-top:15px;
+}
+
+.sehrim-bilgi-header-item-parent p{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+
+
+.sehrim-bilgi-header-item-child{
+    padding: 5px;
+}
+
+
+/*==============Takımımız Stil==============*/
+
+#takimimiz{
+    background-color: var(--bg-color2);
+    padding: 60px 0;
+}
+
+.takim-bilgi{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.takim-bilgi h3{
+    color: #FFF;
+    padding-top: 8px;
+    padding-left: 8px;
+    font-size: auto;
+}
+
+.takim-bilgi-text{
+    width: 70%;
+    height: 100%;
+}
+
+.takim-bilgi-text p{
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: auto;
+}
+
+.takim-arma{
+    width: 30%;
+    padding: 15px;
+}
+
+.takimimiz-table{
+    width: 100%;
+    padding: 10px;
+}
+
+.takimimiz-table .puan-durumu{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.takimimiz-table .puan-durumu th, td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.takimimiz-table .puan-durumu th{
+    background-color: #1a1a1a;
+    color: #CCCCCC;
+}
+
+.takimimiz-table .puan-durumu td{
+    background-color: #222222;
+    color: #CCCCCC;
+}
+
+
+/*==============ilgi alanlarım stil==============*/
+
+#ilgiAlanlarim{
+    background-color: var(--bg-color1);
+    padding: 60px 0;
+}
+
+
+
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
     h1{
@@ -773,6 +891,38 @@ footer{
         color: var(--color1);
         line-height: 65px;
     }
+
+    /*==============Hakkında Kısmı Responsive==============*/
+    
+    .hakkinda-resimler{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hakkinda-resimler .subtitle{
+        position: relative;
+    }
+
+    .hakkinda-resimler .hobi-resim-top, .hobi-resim{
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+    .hakkinda-resimler h3{
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .hakkinda-resimler .hobi-resim-parent{
+        display: inline-block;
+        width: 30%;
+        padding: 10px;
+        margin: 5px;
+        height: 100%;
+    }
+
 
     /*==============Yetenekler Barı Responsive==============*/
     header.header-sticky{
@@ -888,7 +1038,7 @@ footer{
 
 
    #about{
-    padding: 175px 0 150px 0;
+    padding: 75px 0 0 0;
    }
 
    .about-intro{

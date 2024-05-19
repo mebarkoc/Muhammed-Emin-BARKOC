@@ -18,7 +18,7 @@
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-field">
-                    <input type="password" class="loginInput" id="password" placeholder="Şifre" required>
+                    <input type="password" class="loginInput" name="password" id="password" placeholder="Şifre" required>
                     <i class="bx bx-lock-alt"></i>
                 </div>
                 <div class="input-field">
@@ -34,8 +34,30 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const errorMessage = document.getElementById('error-message');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            const validUsername = "g231210452@sakarya.edu.tr";
+            const validPassword = "g231210452";
             
-            
+            if (username == "" || password == "")
+            {
+                errorMessage.textContent = "Kullanıcı adı ve şifre alanı boş bırakılamaz."
+                return false;
+            }
+
+            if (!emailPattern.test(username)) {
+                errorMessage.textContent = "Geçerli bir e-posta adresi giriniz.";
+                return false;
+            }
+
+            if (username != validUsername || password != validPassword)
+            {
+                errorMessage.textContent = "Kullanıcı adı veya şifre hatalı."
+                return false;
+            }
+
+            return true;
         }
     </script>
 </body>
