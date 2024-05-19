@@ -1,4 +1,4 @@
-PROJENİN HOSTING: https://mebarkoc.github.io/barkoc.github.io/
+PROJENİN HOSTING: https://mebarkoc.github.io/Personal-Web-Site
 
 
 
