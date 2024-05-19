@@ -1,3 +1,8 @@
+PROJENİN HOSTING: https://mebarkoc.github.io/Personal-Web-Site
+
+
+
+
 Bireysel olarak kendimi ve memlekitimi tanıtan kişisel bir web sitesi geliştiriyorum.
 HTML, CSS, Javascript vb. bu projede kullanıyorum.
 Site tasarımı olarak Bootstrap içeren responsive bir yapı kullanıyorum.
