@@ -819,13 +819,13 @@ footer{
 }
 
 .takimimiz-table{
-    width: 100%;
     padding: 10px;
 }
 
 .takimimiz-table .puan-durumu{
     width: 100%;
     border-collapse: collapse;
+    position:relative;
 }
 
 .takimimiz-table .puan-durumu th, td{
@@ -837,6 +837,7 @@ footer{
 .takimimiz-table .puan-durumu th{
     background-color: #1a1a1a;
     color: #CCCCCC;
+
 }
 
 .takimimiz-table .puan-durumu td{
@@ -852,7 +853,16 @@ footer{
     padding: 60px 0;
 }
 
+@media (max-width: 700px){
 
+    #responsiveTable th:nth-child(5),
+    #responsiveTable td:nth-child(5),
+    #responsiveTable th:nth-child(6),
+    #responsiveTable td:nth-child(6) {
+        display: none;
+    }
+    
+}
 
 /*==============Orta Boyuttaki Ekranlar (768 px ve fazlası)==============*/
 @media (min-width: 768px){
