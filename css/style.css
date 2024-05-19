@@ -118,6 +118,33 @@ header .portfolio-row.header-wrap{
     color: var(--color1);
 }
 
+
+.brand-name:hover{
+    padding: 10px;
+    border: 1px solid rgb(126, 126, 214);
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+
+
+.brand-name:after{
+    content: "Giriş Yap";
+    color: #FFF;
+    position: absolute;
+    font-size: 1.25rem;
+    opacity: 0;
+    transition: .75s;
+    left: 12px;
+    padding-left: 8%;
+}
+
+.brand-name:hover:after{
+    opacity: 1;
+    left: 13.5%;
+}
+
+
 .navbar-toggle i{
     font-size: 1.25rem;
     line-height: 30px;
@@ -481,7 +508,7 @@ h1 strong, h2 strong{
 .input-wrapper, .input-konu, .input-aciklama, .form-submit{
     width: 100%;
     padding: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .hata-txt{
@@ -491,7 +518,7 @@ h1 strong, h2 strong{
     display: none;
 }
 
-.input-control, .iletisim-msj{
+.item, .iletisim-msj{
     font-family: 'Poppins' sans-serif;
     font-size: 1rem;
     background-color: #f6f6f9;
@@ -510,6 +537,7 @@ h1 strong, h2 strong{
     line-height: 1.2;
     padding: 20px 30px;
     resize: none;
+    margin-top: 20px;
 }
 
 .btn-submit{
@@ -523,7 +551,25 @@ h1 strong, h2 strong{
     cursor: pointer;
 }
 
+.btn-clear{
+    width: 100%;
+    padding: 15px 30px;
+    color: #FFF;
+    font-family: 'Poppins' sans-serif;
+    background-color: #ff5252;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
 
+.input-wrapper.error .hata-txt{
+    display: block;
+}
+
+
+.input-konu.error .hata-txt{
+    display: block;
+}
 
 
 
@@ -728,7 +774,7 @@ footer{
         line-height: 65px;
     }
 
-    /*==============Yetenekler Barı==============*/
+    /*==============Yetenekler Barı Responsive==============*/
     header.header-sticky{
         position: fixed;
         background-color: #FFF;
@@ -814,10 +860,11 @@ footer{
         margin-bottom: 40px;
     }
 
-    .input-konu, .form-submit{
+    .input-konu, .form-submit, .form-clear{
         padding: 10px;
     }
 
+   
 
     /*==============İletişim Responsive==============*/
 

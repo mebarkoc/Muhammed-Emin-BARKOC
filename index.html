@@ -25,9 +25,6 @@
                             <a href="#about" class="navbar-link">Ana Sayfa</a>
                         </li>
                         <li>
-                            <a href="#hakkında" class="navbar-link">Hakkında</a>
-                        </li>
-                        <li>
                             <a href="#resume" class="navbar-link">Eğitim</a>
                         </li>
                         <li>
@@ -40,11 +37,14 @@
                             <a href="#iletisim" class="navbar-link">İletişim</a>
                         </li>
                     </ul>
+
                 </div>
+
                 <div class="navbar-toggle">
                     <i class="lni lni-grid-alt"></i>
                 </div>
             </div>
+
         </div>
     </header>
 
@@ -270,28 +270,27 @@
                     <form action="#" id="iletisim-form">
                         <div class="portfolio-row">
                             <div class="input-wrapper">
-                                <input type="text" id="isim" name="isim" placeholder="İsminizi ve soyisminizi giriniz." class="input-control" autocomplete="off">
-                                <div class="hata-txt">İsim soyisim bölümü boş bırakılamaz.</div>
+                                <input type="text" id="isim" name="isim" placeholder="İsminizi ve soyisminizi giriniz." class="item" autocomplete="off">
+                                <div class="hata-txt">İsim ve Soyisim bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-wrapper">
-                                <input type="email" id="email" name="email" placeholder="e-mail adresinizi giriniz." class="input-control" autocomplete="off">
+                                <input type="email" id="email" name="email" placeholder="e-mail adresinizi giriniz." class="item" autocomplete="off">
                                 <div class="hata-txt">e-mail bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-konu">
-                                <input type="text" id="konu" name="konu" placeholder="konunuzu giriniz." class="input-control" autocaplete="off">
+                                <input type="text" id="konu" name="konu" placeholder="konunuzu giriniz." class="item" autocaplete="off">
                                 <div class="hata-txt">Konu bölümü boş bırakılamaz.</div>
                             </div>
                             <div class="input-aciklama">
                                 <textarea name="mesaj" id="mesaj" rows="9" placeholder="mesajınızı giriniz." class="iletisim-msj" autocomplete="off"></textarea>
-                                <div class="hata-txt">Açıklama bölümü boş bırakılamaz.</div>
                             </div>
                         </div>
                         <div class="form-submit">
-                            <button type="submit" class="btn-submit">Gönder</button>
-                            <div class="loader">
-                                <i class="lni lni-spinner-solid"></i>
-                            </div>
-                            <div class="form-mesaj"></div>
+                            <button type="submit" class="btn-submit">Gönder</button>                    
+                        </div>
+                        <div class="form-clear">
+                            <button type="reset" class="btn-clear">TEMİZLE</button>
+
                         </div>
                     </form>
                 </div>
@@ -351,7 +350,7 @@
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

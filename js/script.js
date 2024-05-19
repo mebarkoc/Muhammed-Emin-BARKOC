@@ -87,15 +87,15 @@ const swiper = new Swiper('.sehrim-slider', {
 // Email Gönder 
 
 const form = document.querySelector("form");
-const fullName = document.getElementById("email");
-const email = document.getElementById("isim");
+const fullName = document.getElementById("isim");
+const email = document.getElementById("email");
 const konu = document.getElementById("konu");
 const mess = document.getElementById("mesaj");
 
 
 function sendEmail() {
 
-    const bodyMessage = 'Full Name: ${fullName.value}<br> Email: ${email.value} <br> Mesaj: ${mess.value}';
+    const bodyMessage = `İsim Soyisim: ${fullName.value}<br> Email: ${email.value}<br> Mesaj: ${mess.value}`;
 
 
     Email.send({
@@ -106,13 +106,58 @@ function sendEmail() {
       From : "emin.barkoc@ogr.sakarya.edu.tr",
       Subject : konu.value,
       Body : bodyMessage
-    })
+    }).then(
+      message => {
+        if (message == "OK"){
+          Swal.fire({
+            title: "Başarılı",
+            text: "Mesaj başarılı bir şekilde gönderilmiştir.",
+            icon: "success"
+          });
+        }
+      }      
+    );
+  
 }
+
+
+function kontrolInput() {
+
+  const items = document.querySelectorAll(".item");
+
+  for (const item of items){
+    if (item.value == ""){
+      item.classList.add("error");
+      item.parentElement.classList.add("error");
+
+    }
+
+    item.addEventListener("keyup", () => {
+      
+      if(item.value != ""){
+        item.classList.remove("error");
+        item.parentElement.classList.remove("error");
+      }
+      else{
+        item.classList.remove("error");
+        item.parentElement.classList.add("error");
+      }
+
+    });
+      
+  }
+}
+
+
 
 form.addEventListener("submit" , (e) => {
 
   e.preventDefault();
 
-  sendEmail();
+  kontrolInput();
 
+  if(!fullName.classList.contains("error") && !email.classList.contains("error") && !konu.classList.contains("error"))
+    {
+      sendEmail();
+    }
 });
