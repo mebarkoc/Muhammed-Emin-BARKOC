@@ -1,4 +1,4 @@
-PROJENİN HOSTING: https://mebarkoc.github.io/Muhammed-Emin-BARKOÇ
+PROJENİN HOSTING: https://mebarkoc.github.io/Muhammed-Emin-BARKOC
 
 
 
